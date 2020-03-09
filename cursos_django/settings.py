@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users','circles',
 ]
-
+THIRD_PARTY_APPS = [
+    'rest_framework'
+]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -50,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'rest_framework.urls'
+ROOT_URLCONF = 'cursos_django.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'rest_framework.wsgi.application'
+WSGI_APPLICATION = 'cursos_django.wsgi.application'
 AUTH_USER_MODEL = 'users.User'
 
 # Database
