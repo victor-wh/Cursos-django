@@ -1,7 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from users.serializers import UserLoginSerializer, UserModelSerializer
+from users.serializers import UserLoginSerializer, UserModelSerializer,UserSignUpSerializer
 
 class UserLoginAPIView(APIView):
     def post(self,request,*args,**kwargs):
@@ -14,3 +14,10 @@ class UserLoginAPIView(APIView):
         }
         return Response(data, status=status.HTTP_201_CREATED)
 
+class UserSignUpAPIView(APIView):
+    def post(self,request,*args,**kwargs):
+        serializer = UserSignUpSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        user = serializer.save()
+        data = UserModelSerializer(user).data
+        return Response(data, status=status.HTTP_201_CREATED)

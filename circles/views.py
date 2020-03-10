@@ -32,9 +32,19 @@ def probar(request):
         "Content-type": "application/x-www-form-urlencoded"
     }
     data = {
-        'email':'prueba@gmail.com',
+        'email':'develop1@gmail.com',
+        'first_name': 'Victor',
+        'last_name': 'Albornoz',
+        'username': 'develop1',
+        'password':'temporal',
+        'password_confirmation': 'temporal',
+        'phone_number':'9983950079',
+
+    }
+    data_login = {
+        'email':'develop1@gmail.com',
         'password':'temporal',
     }
-    r = requests.post('http://127.0.0.1:8000/login/', headers=headers, data=data)
+    r = requests.post('http://127.0.0.1:8000/login/', headers=headers, data=data_login)
 
     return HttpResponse(r.text)
