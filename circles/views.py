@@ -32,9 +32,9 @@ def probar(request):
         "Content-type": "application/x-www-form-urlencoded"
     }
     data = {
-        'name': 'Manzana',
-        'slug_name':'manzana',
+        'email':'prueba@gmail.com',
+        'password':'temporal',
     }
-    r = requests.post('http://127.0.0.1:8000/circles/create/', headers=headers, data=data)
+    r = requests.post('http://127.0.0.1:8000/login/', headers=headers, data=data)
 
     return HttpResponse(r.text)

@@ -39,9 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users','circles',
     'rest_framework',
+    'rest_framework.authtoken',
 ]
 THIRD_PARTY_APPS = [
     'rest_framework'
+    'rest_framework.authtoken',
 ]
 
 REST_FRAMEWORK = {
