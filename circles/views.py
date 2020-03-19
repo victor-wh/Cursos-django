@@ -45,6 +45,9 @@ def probar(request):
         'email':'develop1@gmail.com',
         'password':'temporal',
     }
+    data_token = {
+        'token':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiZW1haWxfY29uZmlybWF0aW9uIiwidXNlciI6ImRldmVsb3AxIiwiZXhwIjoxNTg0OTAzOTgyfQ.jFizGpCy4hIYkMMF6nQG8E_yQgjMfaaC06Cu8Tj86Gg'
+    }
     r = requests.post('http://127.0.0.1:8000/login/', headers=headers, data=data_login)
 
     return HttpResponse(r.text)

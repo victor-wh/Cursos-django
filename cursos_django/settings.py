@@ -78,8 +78,19 @@ TEMPLATES = [
         },
     },
 ]
+DEFAULT_FROM_EMAIL = "you@example.com"
+
+SERVER_EMAIL = "server6.wisphub@gmail.com"
+
+ANYMAIL = {
+    # (exact settings here depend on your ESP...)
+    "MAILGUN_API_KEY": "<your Mailgun key>",
+    "MAILGUN_SENDER_DOMAIN": 'mg.example.com',
+}
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 WSGI_APPLICATION = 'cursos_django.wsgi.application'
+
 AUTH_USER_MODEL = 'users.User'
 
 # Database

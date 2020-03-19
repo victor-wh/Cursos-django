@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.contrib import admin
 
 # Register your models here.
-from circles.models import Circle
+from circles.models import Circle, Membership
 
 @admin.register(Circle)
 class CircleAdmin(admin.ModelAdmin):
